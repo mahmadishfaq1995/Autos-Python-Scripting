@@ -1,0 +1,76 @@
+fixtures:
+hold external pieces of static data can be test data or files to be uploaded or file we write into via script
+integrtation
+test files are located here with .js extension
+.spec a naming convention
+plugins
+can be used to load plugins
+support
+index.js used to store global config that modify cypress loads automatically
+commans.jscustom commands
+
+
+
+cypress.json
+project config env etc saved here
+
+
+Describe
+Holds Collection of Test
+
+IT
+REpresents individual Test
+
+
+identify ELements
+ 
+ Moch Hooks
+ Before 
+ After
+ Before Each
+ After Each
+ 
+ Project Level Configuration can be defined in Configuration.json
+ 
+ 
+ then command:
+ allows us to work with subject yeilded from previous object
+ works as native promises
+ can be used while debugging
+ can be used to verify cross verification or during aliases requires you to work with object instantly
+ 
+ alias command:
+ can be used to work with Object at a later time can be used to share contents between hooks and objects
+ as command with alias name can be used later with @ prefix
+ 
+ lec 10
+ run all spec files in all folders                ----- >   npx cypress run comand  or in package.json "test" : cypress run
+ tun all spec files in a folder			spec flag ----- > 	npx cypress run --spec "" ----- > 	npm run test_01 or with spec flag npm run test -- spec "folder path woth asterics"
+  
+ run one spec file 								  ------>  npm cypress run --spec "Filename"	  
+ run or skip a specific test in a spec file       ------>  it.only  will make only this test run or it.skip can also be used can be used with project suite and test both
+ 
+ 
+ generate html report for cypress test runs
+ mochawesome report
+ cypress executes each spec in isolation and hence separate report generated for each spec
+ we can merge all reports in one
+ 
+ 
+ 
+ "testFiles": [
+    "QAM/TC02_leadschd.spec.js",
+    "QAM/TC03_leadschd-elements.spec.js",
+    "QAM/TC04_root.spec.js",
+    "QAM/TC05_elementsgetbyindex.spec.js",
+    "QAM/TC06_customcommandscreation.spec.js",
+    "QAM/TC07_hooks_creation.spec.js",
+    "QAM/TC08_baseurl.spec.js",
+    "QAM/TC09_Thencommand.spec.js",
+    "QAM/TC10_aliases.spec.js",
+    "QAM/TC011_plugins.spec.js"
+  ],
+ 
+ 
+ 
+ 
